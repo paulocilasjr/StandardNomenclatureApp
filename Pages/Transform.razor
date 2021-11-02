@@ -1,0 +1,50 @@
+﻿@page "/transform"
+@using System
+@using System.Collections.Generic;
+@using System.Linq
+@using QueryTreatment
+@using MissenseVariantInfoSeparation
+ 
+
+<h3>Input</h3>
+
+<input @bind="missenseVariantQuery" placeholder="Write missense variant separated by semicolons (;)"/>
+<button @onclick="QueryMissense">Query Missense</button>
+<ul>
+    @if (toView)
+    {
+        @foreach(string nomenclature in cNomenclatureResult)
+        {
+            <li>@nomenclature</li>
+        }
+    }
+</ul>
+
+@code {
+    
+    static string missenseVariantQuery;
+    static string[] listMissenseQuery;
+    static bool isListValid;
+    static List<string> cNomenclatureResult; 
+    static bool toView = false;
+    static List<GetMissenseInfos> missenseVariantsObjectToView = new List<GetMissenseInfos>();
+
+    static void QueryMissense()
+    {
+        listMissenseQuery = MissenseVariant.MissenseVariantToList(missenseVariantQuery);
+        isListValid = MissenseVariant.MisseseValidation(listMissenseQuery);
+        if (isListValid)
+        {
+            List<GetMissenseInfos> missenseVariantsObject = new List<GetMissenseInfos>();
+            foreach (string missenseVariant in listMissenseQuery)
+            {
+                GetMissenseInfos missenseObject = new GetMissenseInfos(missenseVariant);
+                missenseVariantsObject.Add(missenseObject);
+            }
+            
+            missenseVariantsObjectToView = missenseVariantsObject;
+            cNomenclatureResult = GetMissenseInfos.GetCodonsCompared(missenseVariantsObject);
+            toView = true;
+        } 
+    }
+}
