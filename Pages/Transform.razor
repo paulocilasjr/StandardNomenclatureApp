@@ -6,10 +6,10 @@
 @using MissenseVariantInfoSeparation
  
 
-<h3>Input</h3>
+<h3>Standar nomencluture from p. to c.</h3>
 
-<input @bind="missenseVariantQuery" placeholder="Write missense variant separated by semicolons (;)"/>
-<button @onclick="QueryMissense">Query Missense</button>
+<input size="100" @bind="missenseVariantQuery" placeholder="Write missense variant separated by semicolons (;)"/>
+<button @onclick="QueryMissense">Query</button>
 <ul>
     @if (toView)
     {

@@ -1,10 +1,14 @@
+using System;
+using System.Text.RegularExpressions;
+
 namespace QueryTreatment
 {
     public class MissenseVariant
     {
         public static string[] MissenseVariantToList (string userQuery)
         {
-            string[] missenseVariantList = userQuery.Split(";");
+            string userQueryNoSpaces = userQuery.Replace( " ", "" );
+            string[] missenseVariantList = userQueryNoSpaces.Split(";");
             return missenseVariantList;
         }
 
