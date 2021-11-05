@@ -10,15 +10,15 @@
 
 <input size="100" @bind="missenseVariantQuery" placeholder="Write missense variant separated by semicolons (;)"/>
 <button @onclick="QueryMissense">Query</button>
-<ul>
+<ol>
     @if (toView)
     {
-        @foreach(string nomenclature in cNomenclatureResult)
-        {
-            <li>@nomenclature</li>
-        }
+            @foreach(string nomenclature in cNomenclatureResult)
+            {
+                <li>@nomenclature</li>
+            }
     }
-</ul>
+</ol>
 
 @code {
     
