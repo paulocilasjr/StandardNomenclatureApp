@@ -123,15 +123,15 @@ using MissenseVariantInfoSeparation;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\ufes\Desktop\Dev\StandardNomenclatureApp\Pages\Transform.razor"
+#line 31 "C:\Users\ufes\Desktop\Dev\StandardNomenclatureApp\Pages\Transform.razor"
        
     
     static string missenseVariantQuery;
     static string[] listMissenseQuery;
-    static bool isListValid;
-    static List<string> cNomenclatureResult; 
+    static bool isListValid; 
     static bool toView = false;
     static List<GetMissenseInfos> missenseVariantsObjectToView = new List<GetMissenseInfos>();
+    static Dictionary<GetMissenseInfos, List<string>> listOfEachMissenseForNomenclature = new Dictionary<GetMissenseInfos, List<string>>();
 
     static void QueryMissense()
     {
@@ -147,7 +147,7 @@ using MissenseVariantInfoSeparation;
             }
             
             missenseVariantsObjectToView = missenseVariantsObject;
-            cNomenclatureResult = GetMissenseInfos.GetCodonsCompared(missenseVariantsObject);
+            listOfEachMissenseForNomenclature = GetMissenseInfos.GetCodonsCompared(missenseVariantsObject);
             toView = true;
         } 
     }
