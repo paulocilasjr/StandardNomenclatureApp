@@ -23,9 +23,10 @@ namespace MissenseVariantInfoSeparation
          public static Dictionary<GetMissenseInfos, List<string>> GetCodonsCompared (List<GetMissenseInfos> missenseVariantsObject) 
          {
              Dictionary<GetMissenseInfos, List<string>> listOfEachMissense = new Dictionary<GetMissenseInfos, List<string>>(); 
-             List<string> cNomenclature = new List<string>();
+             
              foreach (GetMissenseInfos missenseVariantObject in missenseVariantsObject)
              {
+                List<string> cNomenclature = new List<string>();
                 string[] variantReferenceCodons = CodonMap.CodonSequence(missenseVariantObject.variantReference);
                 string[] variantMutantCodons = CodonMap.CodonSequence(missenseVariantObject.variantMutant);
                 foreach (string mutantCodon in variantMutantCodons)
@@ -46,7 +47,10 @@ namespace MissenseVariantInfoSeparation
                         }
                         if (numberOfDifference == 1)
                         {
-                            cNomenclature.Add(possibleNomenclature);
+                            if (!cNomenclature.Contains(possibleNomenclature))
+                            {
+                                cNomenclature.Add(possibleNomenclature);
+                            }
                         }
                     }   
                 }

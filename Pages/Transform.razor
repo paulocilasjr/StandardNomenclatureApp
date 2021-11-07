@@ -6,7 +6,7 @@
 @using MissenseVariantInfoSeparation
  
 
-<h3>Standard nomencluture from p. to c.</h3>
+<h3>Standard nomencluture for missense (from .p to c.)</h3>
 
 <input size="100" @bind="missenseVariantQuery" placeholder="Write missense variant separated by semicolons (;)"/>
 <button @onclick="QueryMissense">Query</button>
@@ -17,8 +17,6 @@
             @foreach(KeyValuePair<GetMissenseInfos, List<string>> item in listOfEachMissenseForNomenclature)
             {
                 <li>@item.Key.missensePNomenclature</li>
-            
-                //Fix the problem with priting all results all times, not being specific for each missense.
                 <ul>
                     @foreach(string nomenclature in item.Value)
                     {
