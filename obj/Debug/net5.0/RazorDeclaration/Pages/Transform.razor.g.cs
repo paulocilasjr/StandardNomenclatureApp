@@ -136,7 +136,7 @@ using MissenseVariantInfoSeparation;
     static void QueryMissense()
     {
         listMissenseQuery = MissenseVariant.MissenseVariantToList(missenseVariantQuery);
-        isListValid = MissenseVariant.MisseseValidation(listMissenseQuery);
+        isListValid = MissenseVariant.MissenseValidation(listMissenseQuery);
         if (isListValid)
         {
             List<GetMissenseInfos> missenseVariantsObject = new List<GetMissenseInfos>();

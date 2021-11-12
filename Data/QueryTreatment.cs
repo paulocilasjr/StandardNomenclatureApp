@@ -1,5 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
+using TypeOfAminoAcidInput;
+using ThreeLetterAminoAcidToOne;
 
 namespace QueryTreatment
 {
@@ -7,44 +9,36 @@ namespace QueryTreatment
     {
         public static string[] MissenseVariantToList (string userQuery)
         {
-            string userQueryNoSpaces = userQuery.Replace( " ", "" );
-            string[] missenseVariantList = userQueryNoSpaces.Split(";");
+            string[] missenseVariantList = userQuery.Split(new char [] { ',', ' ', ';' }, StringSplitOptions.RemoveEmptyEntries);
+            for(int index = 0; index < missenseVariantList.Length; index++)
+            {
+                missenseVariantList[index] = missenseVariantList[index].Trim( new char[] {'p', '.', '(', ')'});
+                if(TypesOfAminoAcidInput.isThreeLetterAminoAcid(missenseVariantList[index]))
+                {
+                    int lengthOfMissense = missenseVariantList[index].Length;
+                    int lastThreeCharacterIndex = missenseVariantList[index].Length - 3;
+                    string startThreeLetterAminoAcid = missenseVariantList[index].Substring(0, 3);
+                    string endThreeLetterAminoAcid = missenseVariantList[index].Substring(lastThreeCharacterIndex);
+                    missenseVariantList[index] = missenseVariantList[index].Remove(lastThreeCharacterIndex);
+                    missenseVariantList[index] = missenseVariantList[index].Remove(0,3);
+                    string firstLetter = AminoAcidAbbreviationMap.ThreeLetterAbbreviationToOne(startThreeLetterAminoAcid);
+                    string lastLetter = AminoAcidAbbreviationMap.ThreeLetterAbbreviationToOne(endThreeLetterAminoAcid);
+                    missenseVariantList[index] = firstLetter+missenseVariantList[index]+lastLetter;
+                }
+            }
             return missenseVariantList;
         }
 
-        public static bool MisseseValidation (string[] missenseVariantList)
+        public static bool MissenseValidation (string[] missenseVariantList)
         {
             bool isValid = true;
-            foreach(string missenseVariant in missenseVariantList)
+            foreach (string missense in missenseVariantList)
             {
-                int iteration = 0;
-                foreach (char atTheMoment in missenseVariant)
+                if(!TypesOfAminoAcidInput.isOneLetterAminoAcid(missense))
                 {
-                    if(iteration == 0)
-                    {
-                        if (char.IsDigit(missenseVariant[0]))
-                        {
-                            isValid = false;
-                        }    
-                        iteration ++;
-                    }
-                
-                    else if (iteration == missenseVariant.Length-1)
-                    {
-                        if(char.IsDigit(missenseVariant[missenseVariant.Length-1]))
-                        {
-                            isValid = false;
-                        }
-                    }
-                    else
-                    {
-                        if(!char.IsDigit(atTheMoment))
-                        {
-                            isValid = false;
-                        }
-                        iteration ++;
-                    }
+                    isValid = false;
                 }
+
             }
             return isValid;
         }

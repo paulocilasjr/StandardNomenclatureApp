@@ -20,12 +20,12 @@ namespace MissenseVariantInfoSeparation
             this.codon  = Int32.Parse(missenseVariant.Substring(1, (missenseVariant.Length-2)));
         }
 
-         public static Dictionary<GetMissenseInfos, List<string>> GetCodonsCompared (List<GetMissenseInfos> missenseVariantsObject) 
-         {
-             Dictionary<GetMissenseInfos, List<string>> listOfEachMissense = new Dictionary<GetMissenseInfos, List<string>>(); 
+        public static Dictionary<GetMissenseInfos, List<string>> GetCodonsCompared (List<GetMissenseInfos> missenseVariantsObject) 
+        {
+            Dictionary<GetMissenseInfos, List<string>> listOfEachMissense = new Dictionary<GetMissenseInfos, List<string>>(); 
              
-             foreach (GetMissenseInfos missenseVariantObject in missenseVariantsObject)
-             {
+            foreach (GetMissenseInfos missenseVariantObject in missenseVariantsObject)
+            {
                 List<string> cNomenclature = new List<string>();
                 string[] variantReferenceCodons = CodonMap.CodonSequence(missenseVariantObject.variantReference);
                 string[] variantMutantCodons = CodonMap.CodonSequence(missenseVariantObject.variantMutant);
@@ -55,9 +55,9 @@ namespace MissenseVariantInfoSeparation
                     }   
                 }
                 listOfEachMissense.Add(missenseVariantObject, cNomenclature);
-             }
-             return listOfEachMissense;
-         }
+            }
+            return listOfEachMissense;
+        }
     }
     
 }

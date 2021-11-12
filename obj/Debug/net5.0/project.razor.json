@@ -45,39 +45,6 @@
         }
       },
       {
-        "HashCode": -1900653836,
-        "Kind": "Components.Component",
-        "Name": "StandardNomenclatureApp.Pages.Transform",
-        "AssemblyName": "StandardNomenclatureApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Transform"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "StandardNomenclatureApp.Pages.Transform"
-        }
-      },
-      {
-        "HashCode": 2011378766,
-        "Kind": "Components.Component",
-        "Name": "StandardNomenclatureApp.Pages.Transform",
-        "AssemblyName": "StandardNomenclatureApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "StandardNomenclatureApp.Pages.Transform"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "StandardNomenclatureApp.Pages.Transform",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 479600340,
         "Kind": "Components.Component",
         "Name": "StandardNomenclatureApp.Pages.Index",
@@ -111,6 +78,39 @@
         }
       },
       {
+        "HashCode": -1900653836,
+        "Kind": "Components.Component",
+        "Name": "StandardNomenclatureApp.Pages.Transform",
+        "AssemblyName": "StandardNomenclatureApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Transform"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "StandardNomenclatureApp.Pages.Transform"
+        }
+      },
+      {
+        "HashCode": 2011378766,
+        "Kind": "Components.Component",
+        "Name": "StandardNomenclatureApp.Pages.Transform",
+        "AssemblyName": "StandardNomenclatureApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "StandardNomenclatureApp.Pages.Transform"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "StandardNomenclatureApp.Pages.Transform",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -741917748,
         "Kind": "Components.Component",
         "Name": "StandardNomenclatureApp.App",
@@ -140,6 +140,59 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "StandardNomenclatureApp.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 154527876,
+        "Kind": "Components.Component",
+        "Name": "StandardNomenclatureApp.Shared.SurveyPrompt",
+        "AssemblyName": "StandardNomenclatureApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "StandardNomenclatureApp.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": -1734659689,
+        "Kind": "Components.Component",
+        "Name": "StandardNomenclatureApp.Shared.SurveyPrompt",
+        "AssemblyName": "StandardNomenclatureApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "StandardNomenclatureApp.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "StandardNomenclatureApp.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -236,59 +289,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "StandardNomenclatureApp.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 154527876,
-        "Kind": "Components.Component",
-        "Name": "StandardNomenclatureApp.Shared.SurveyPrompt",
-        "AssemblyName": "StandardNomenclatureApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "StandardNomenclatureApp.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": -1734659689,
-        "Kind": "Components.Component",
-        "Name": "StandardNomenclatureApp.Shared.SurveyPrompt",
-        "AssemblyName": "StandardNomenclatureApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "StandardNomenclatureApp.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "StandardNomenclatureApp.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

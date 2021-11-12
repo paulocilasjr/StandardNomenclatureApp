@@ -6,7 +6,7 @@
 @using MissenseVariantInfoSeparation
  
 
-<h3>Standard nomencluture for missense (from .p to c.)</h3>
+<h3>Standard nomenclature for missense (from p. to c.)</h3>
 
 <input size="100" @bind="missenseVariantQuery" placeholder="Write missense variant separated by semicolons (;)"/>
 <button @onclick="QueryMissense">Query</button>
@@ -40,7 +40,7 @@
     static void QueryMissense()
     {
         listMissenseQuery = MissenseVariant.MissenseVariantToList(missenseVariantQuery);
-        isListValid = MissenseVariant.MisseseValidation(listMissenseQuery);
+        isListValid = MissenseVariant.MissenseValidation(listMissenseQuery);
         if (isListValid)
         {
             List<GetMissenseInfos> missenseVariantsObject = new List<GetMissenseInfos>();
