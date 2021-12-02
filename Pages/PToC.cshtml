@@ -1,0 +1,25 @@
+﻿@page
+@using StandarNomenclature.Pages
+@model PToCModel
+@{
+
+}
+
+<h2>Introduction to the page</h2>
+
+<p>
+    @Model.Message
+</p>
+
+<form method="post">
+    <input type="text" name="missenseQuery"  size="35" placeholder="Example: M1L, Glu203Phe; p.V50Trp" required/>
+    <input type="submit" />
+</form>
+
+@if(Model.listOfmissenseVariants != null)
+{
+    @foreach (string result in Model.nomenclature)
+    {
+        <p>@result</p>
+    }
+}

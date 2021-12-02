@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ufes\\Desktop\\Dev\\StandardNomenclatureApp\\StandardNomenclatureApp.csproj",
-      "projectName": "StandardNomenclatureApp",
-      "projectPath": "C:\\Users\\ufes\\Desktop\\Dev\\StandardNomenclatureApp\\StandardNomenclatureApp.csproj",
+      "projectUniqueName": "C:\\Users\\ufes\\Desktop\\Dev\\C#\\StandarNomenclature\\StandarNomenclature.csproj",
+      "projectName": "StandarNomenclature",
+      "projectPath": "C:\\Users\\ufes\\Desktop\\Dev\\C#\\StandarNomenclature\\StandarNomenclature.csproj",
       "packagesPath": "C:\\Users\\ufes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ufes\\Desktop\\Dev\\StandardNomenclatureApp\\obj\\",
+      "outputPath": "C:\\Users\\ufes\\Desktop\\Dev\\C#\\StandarNomenclature\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ufes\\AppData\\Roaming\\NuGet\\NuGet.Config",
